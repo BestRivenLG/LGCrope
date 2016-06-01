@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="MF4-AP-VHw">
+                                <rect key="frame" x="24" y="65" width="268" height="365"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rik-3J-afH">
+                                <rect key="frame" x="124" y="465" width="46" height="30"/>
+                                <state key="normal" title="截图"/>
+                                <connections>
+                                    <action selector="cropAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vud-3Q-GvO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vj7-4i-0rJ">
+                                <rect key="frame" x="190" y="465" width="75" height="30"/>
+                                <state key="normal" title="重置有惊喜"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ivx-V8-75Q"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-AH-shB">
+                                <rect key="frame" x="55" y="140" width="210" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="cvd-h9-7FQ"/>
+                                    <constraint firstAttribute="height" constant="210" id="y3b-7H-yGU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2rO-AH-shB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-39" id="fBC-eN-Adg"/>
+                            <constraint firstItem="2rO-AH-shB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hav-zT-BDK"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cropButton" destination="rik-3J-afH" id="IOU-XX-sl3"/>
+                        <outlet property="cropIMageView" destination="2rO-AH-shB" id="ZHk-6f-IGt"/>
+                        <outlet property="originImageView" destination="MF4-AP-VHw" id="EL5-Ff-tQo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="293"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="头像" width="200" height="202"/>
+    </resources>
+</document>
